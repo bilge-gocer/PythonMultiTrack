@@ -19,3 +19,12 @@ class Transaction:
             "transaction_amount": self.transaction_amount,
             "third_party_account": self.third_party_account
         })
+
+    def to_json(self):
+        return {
+            "account_code": self.account_code,
+            "transaction_count": self.transaction_count,
+            "opening_balance": self.opening_balance,
+            "closing_balance": self.closing_balance,
+            "transactions": self.transactions
+        }

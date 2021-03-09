@@ -40,6 +40,15 @@ class Account:
             "transactions": [eval(str(_transaction)) for _transaction in self.transactions]
         })
 
+    def to_json(self):
+        return {
+            "account_code": self.account_code,
+            "transaction_count": self.transaction_count,
+            "opening_balance": self.opening_balance,
+            "closing_balance": self.closing_balance,
+            "transactions": self.transactions
+        }
+
     def add_transaction(self, transaction:Transaction):
         self.transactions.append(transaction)
         self.transaction_count += 1
