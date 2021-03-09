@@ -22,9 +22,8 @@ class Transaction:
 
     def to_json(self):
         return {
-            "account_code": self.account_code,
-            "transaction_count": self.transaction_count,
-            "opening_balance": self.opening_balance,
-            "closing_balance": self.closing_balance,
-            "transactions": self.transactions
+            "transaction_date": self.transaction_date,
+            "transaction_type": self.transaction_type,
+            "transaction_amount": self.transaction_amount,
+            "third_party_account": self.third_party_account
         }
